@@ -15,6 +15,6 @@ class MainController {
                 "account statistics": "/exampleName/statistics",
                 "transfers info": "/exampleName/transfer"
         ])
-        render json
+        render(text: json, contentType: "application/json", encoding: "UTF-8")
     }
 }
