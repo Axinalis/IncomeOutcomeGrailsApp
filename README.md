@@ -22,4 +22,4 @@ Example of json for creating new transfer:
 
 To start app:
 1. Without Docker if you have **grails** installed on local machine, type *grails run-app*, otherwise run ./grailsw script
-2. With Docker, just build the image and run as usually. (*Note: build process is complicated and leaves heavy images*)
+2. With Docker, just build the image using DockerfileDev and run as usually.

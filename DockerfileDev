@@ -1,0 +1,10 @@
+FROM openjdk:8
+
+RUN mkdir /app
+WORKDIR /app
+
+COPY ./ ./
+
+RUN rm -r ./build/
+
+CMD ["./grailsw", "run-app"]
