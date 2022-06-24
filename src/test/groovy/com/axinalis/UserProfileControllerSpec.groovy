@@ -5,14 +5,19 @@ import spock.lang.Specification
 
 class UserProfileControllerSpec extends Specification implements ControllerUnitTest<UserProfileController> {
 
+    def userProfileController = new UserProfileController()
+
     def setup() {
     }
 
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "User profile is visited correct response is returned"() {
+        when:
+        userProfileController.index()
+
+        then:
+        response.getJson()["username"] != null
     }
 }

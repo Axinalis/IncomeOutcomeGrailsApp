@@ -2,7 +2,7 @@ package com.axinalis
 
 import groovy.json.JsonOutput
 
-class StatisticsController {
+class StatisticsController{
 
     def moneyTransferService
 

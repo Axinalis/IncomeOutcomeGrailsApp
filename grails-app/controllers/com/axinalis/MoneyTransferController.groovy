@@ -1,22 +1,14 @@
 package com.axinalis
 
-import grails.rest.RestfulController
+import groovy.json.JsonOutput
 
-class MoneyTransferController extends RestfulController<MoneyTransfer>{
+class MoneyTransferController{
 
-    def id
     def moneyTransferService
 
-    MoneyTransferController() {
-        super(MoneyTransfer)
-    }
-
-    MoneyTransferController(boolean readOnly) {
-        super(MoneyTransfer, readOnly)
-    }
-
     def index() {
-        respond moneyTransferService.list()
+        String json = JsonOutput.toJson(moneyTransferService.list())
+        render(text: json, contentType: "application/json", encoding: "UTF-8")
     }
 
     def create(){

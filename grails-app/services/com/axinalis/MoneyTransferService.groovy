@@ -5,10 +5,6 @@ import grails.gorm.transactions.Transactional
 @Transactional
 class MoneyTransferService {
 
-    def serviceMethod() {
-
-    }
-
     def list(){
         MoneyTransfer.list()
     }
@@ -22,8 +18,7 @@ class MoneyTransferService {
     }
 
     def delete(id){
-        MoneyTransfer.delete(id)
+        MoneyTransfer.get(id).delete()
     }
-
 
 }
